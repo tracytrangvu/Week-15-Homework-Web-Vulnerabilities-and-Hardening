@@ -309,7 +309,10 @@ When complete, submit the file on BCS.
 
 © 2021 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
   
-## `Ketan Vithal Patel`
+##:sunglasses: `Ketan Vithal Patel` :sunglasses:
+==============================================
+### `July 5, 2021 -- UofT Cybersecurity - Boot Camp`
+#### :rose::rose:`Jai Shri Swaminarayan`:rose::rose:
 ```
 હરે કૃષ્ણ હરે કૃષ્ણ  , કૃષ્ણ કૃષ્ણ હરે હરે |  
 હરે રામ હરે રામ , રામ રામ હરે હરે ||
