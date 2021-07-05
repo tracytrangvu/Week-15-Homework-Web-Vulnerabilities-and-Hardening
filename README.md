@@ -308,3 +308,9 @@ When complete, submit the file on BCS.
 ---
 
 © 2021 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+  
+## `Ketan Vithal Patel`
+```
+હરે કૃષ્ણ હરે કૃષ્ણ  , કૃષ્ણ કૃષ્ણ હરે હરે |  
+હરે રામ હરે રામ , રામ રામ હરે હરે ||
+```
