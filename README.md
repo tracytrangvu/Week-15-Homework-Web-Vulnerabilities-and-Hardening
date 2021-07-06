@@ -175,6 +175,16 @@ Start the `Terminal` in your Virtual Machine.
 
 ---
 
+### References
+
+- [protecting against command execution attacks](https://www.hacksplaining.com/prevention/command-execution), on Hacksplanning  
+- [Command Injection](https://www.imperva.com/learn/application-security/command-injection/) Imperva.
+- Garrett Gross: [What is a brute force attack?](https://cybersecurity.att.com/blogs/security-essentials/brute-force-attack-mitigation-methods-best-practices) AT&T  Business.
+- [Brute force attack mitigation 101](https://www.n-able.com/blog/brute-force-attack-mitigation-101) By N-able: May 18, 2016.
+
+---
+
+
 © 2021 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
   
 ## :sunglasses: `Ketan Vithal Patel` :sunglasses:
