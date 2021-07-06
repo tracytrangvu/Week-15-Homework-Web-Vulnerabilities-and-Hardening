@@ -1,7 +1,7 @@
 # Unit 15 Homework - Web Vulnerabilities and Hardening.
 
 ### Web Application 1: *Your Wish is My Command Injection*
-
+-----------------------------------------------------------
 If your Vagrant file is active then `Open Oracle VM VirtualBox Manager` and start your Virtual Machine.  
 
 Start the `Terminal` in your Virtual Machine.
@@ -36,7 +36,7 @@ Start the `Terminal` in your Virtual Machine.
       ![etc/host](/Images/etc-hosts.PNG)  
   
 ### ***Recommended Mitigation Strategies***  
-
+-------------------------------------------
   > - **Avoid Command Line Calls Altogether if possible** - _Use of APIs only where ever possible._  
   > - **Set up Input Validation** - _Command Injection vulnerabilities occur when untrusted input is not sanitized correctly._ A white list of possible inputs should be created for the system to accepts only the pre-approved inputs, and avoid the following characters:
   >  ;  
@@ -46,7 +46,7 @@ Start the `Terminal` in your Virtual Machine.
   > - **Run with Restricted Permissions** - Reduce the number of users to access the database and the secure the locations of all confidential files and the directories.  
 
 ### Web Application 2: *A Brute Force to Be Reckoned With*
-
+----------------------------------------------------------
 - From the `Terminal` in Vagrant run the command `sudo burpsuite` to start the `Burp Suite Community Edition`
 - Open Firefox browser on Vagrant and navigate to the webpage <http://192.168.13.35/ba_insecure_login_1.php>
 - Make sure the `FoxyProxy` setting on the web browser is set to `Burp`.  
@@ -98,7 +98,7 @@ Start the `Terminal` in your Virtual Machine.
   ![Tonystark - Successful](/Images/intruder-results-tonystark-sucessful.PNG)  
 
 ### ***Recommended Mitigation Strategies***  
-
+-------------------------------------------
 > There several ways to monitor and mitigate:  
 >   - Locking the account after a fixed number of failed attempts.  
 >   - Making the Usernames and Passwords more complex, and increase the frequency of changing the passwords.  
@@ -106,7 +106,7 @@ Start the `Terminal` in your Virtual Machine.
 >   - Brute force site scanners. Scan the logs to see if there was a brute force attempted recently.  
 
 ### Web Application 3: *Where's the BeEF?*
-
+------------------------------------------
 1. Complete the following to set up the activity. 
 
    - On Vagrant, open a command line and run the following command: `sudo beef`
