@@ -189,7 +189,7 @@ Start the `Terminal` in your Virtual Machine.
   
 ## :sunglasses: `Ketan Vithal Patel` :sunglasses:
 ==============================================
-### `July 5, 2021 -- UofT Cybersecurity - Boot Camp`
+### `Monday, July 5, 2021 -- UofT Cybersecurity - Boot Camp`
 #### :rose::rose:`Jai Shri Swaminarayan`:rose::rose:
 ```
 હરે કૃષ્ણ હરે કૃષ્ણ, કૃષ્ણ કૃષ્ણ હરે હરે |  
