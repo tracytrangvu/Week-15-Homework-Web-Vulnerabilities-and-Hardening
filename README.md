@@ -308,3 +308,14 @@ When complete, submit the file on BCS.
 ---
 
 © 2021 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+
+---
+
+## Week 15 Homework Solution: Web Vulnerabilities and Hardening
+
+Refer to the following solution files for the homework worksheets: 
+
+* [Week 15 Homework Solution: Web Vulnerabilities and Hardening](https://github.com/karma-786/Week-15-Homework-Web-Vulnerabilities-and-Hardening/blob/main/Week%2015%20Homework%20Web%20Vulnerabilities%20and%20Hardening.md)  
+
+---
+© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
